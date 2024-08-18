@@ -13,6 +13,7 @@ if other service is needed (sockets, for example), the conceived way is to add `
 
 ### Deploy
 
+1. Rename the folder (otherwise, docker-compose network name would be confusing)
 1. Update Node.js version
     - put the required node version into `.nvmrc` file
     - `nvm use`
@@ -24,6 +25,9 @@ if other service is needed (sockets, for example), the conceived way is to add `
     - `docker-compose.dev.yml`:
         - service/service-name: image, container_name
         - volumes/volume-name: name
+1. Run docker-compose:
+    - `npm run compose:up`
+        >`:down` for removing containers with their volumes; `:stop` & `:start` for pausing & starting the containers, respectively
 1. Run the API in dev-mode:
     - `npm run api:dev`
 
