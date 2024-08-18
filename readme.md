@@ -22,7 +22,7 @@ if other service is needed (sockets, for example), the conceived way is to add `
         >If something goes wrong, read the log & manually rollback the package(s) version. Sometimes it happens for reasons beyond me (`npm-check-updates` package just updates the `package.json`)
 1. Update Docker-images versions & names
     - `docker-compose.dev.yml`:
-        - service/service-name: image, container_name
+        - service/service-name: image, container_name, volumes
         - volumes/volume-name: name
 1. Run the API in dev-mode:
     - `npm run api:dev`
