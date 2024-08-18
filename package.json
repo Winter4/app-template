@@ -19,11 +19,9 @@
   "author": "Winter4 <mywinter4@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
     "connect-redis": "^7.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-async-handler": "^1.2.0",
     "express-session": "^1.18.0",
@@ -35,7 +33,6 @@
     "pino-pretty": "^11.2.2"
   },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
     "@types/cookie-parser": "^1.4.7",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
