@@ -20,5 +20,5 @@ fi
 npm install npm-check-updates@latest --save-dev
 npx npm-check-updates -u
 
-echo "sometimes the most actual packages versions conflict with other packages.."
+echo "\nsometimes the most actual packages versions conflict with other packages.."
 echo "..in this case read the npm log and rollback package(s) version"
