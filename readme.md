@@ -27,6 +27,10 @@ if other service is needed (sockets, for example), the conceived way is to add `
 1. Run the API in dev-mode:
     - `npm run api:dev`
 
+### Optional
+
+- `npx husky init`, if you want to use git-hooks. Links: [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks), [Husky](https://typicode.github.io/husky/)
+
 ## Database migrations
 
 - `npm run migrate:new` for creating new migration-file
