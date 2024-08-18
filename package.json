@@ -6,7 +6,7 @@
   "scripts": {
     "update-packages": "sh ./scripts/update-packages.sh",
     "prepare": "husky",
-    "psql": "docker exec -it -postgres psql -U dev dbname",
+    "psql": "docker exec -it template-postgres psql -U dev template",
     "api:dev": "cross-env NODE_ENV=development npx nodemon source/api.ts | pino-pretty --translateTime",
     "compose:up": "docker compose -f ./docker-compose.dev.yml up -d",
     "compose:start": "docker compose -f ./docker-compose.dev.yml start",

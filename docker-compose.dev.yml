@@ -5,7 +5,7 @@ services:
     image: postgres:16.4-alpine
     container_name: "template-postgres"
     environment:
-      POSTGRES_DB: ""
+      POSTGRES_DB: "template"
       POSTGRES_USER: "dev"
       POSTGRES_PASSWORD: "localpass"
     volumes:
