@@ -21,7 +21,7 @@ declare module 'express-session' {
 }
 
 async function main() {
-	const {nodeEnv, deploy: {expressPort, frontendUrl}, sessionSecret} = config;
+	const {nodeEnv, deploy: {apiPort, frontendUrl}, sessionSecret} = config;
 
 	const app = express();
 
@@ -54,9 +54,9 @@ async function main() {
 	app.use(errorHandler);
 
 	// run
-	app.listen(expressPort);
+	app.listen(apiPort);
 
-	logger.info(`\\|/ API is running on port ${expressPort} \\|/`);
+	logger.info(`\\|/ API is running on port ${apiPort} \\|/`);
 }
 
 main();
