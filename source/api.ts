@@ -1,7 +1,7 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
-import RedisStore from 'connect-redis';
+import {RedisStore} from 'connect-redis';
 import cors from 'cors';
 import type {UUID} from 'crypto';
 
@@ -37,7 +37,7 @@ async function main() {
 				// month
 				maxAge: 30 * 24 * 60 * 60 * 1000
 			},
-			name: 'sessionid',
+			name: 'sid',
 			saveUninitialized: false,
 			secret: sessionSecret,
 			resave: false,

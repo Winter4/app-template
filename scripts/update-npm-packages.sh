@@ -1,7 +1,7 @@
 # initiate fresh project
 
 echo "configure .nvmrc & <nvm use> command to handle node versions\n"
-echo "also make sure docker-compose services' versions are ok"
+echo "also make sure docker-compose services versions are ok"
 
 node_version=$(node -v)
 npm_version=$(npm -v)

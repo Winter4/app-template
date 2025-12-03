@@ -1,21 +1,21 @@
-version: "3.9"
+# ---
 
 services:
   postgres:
-    image: postgres:16.4-alpine
-    container_name: "template-postgres"
+    image: postgres:18.1-alpine
+    container_name: ${PROJECT_NAME}_postgres
     environment:
-      POSTGRES_DB: "template"
-      POSTGRES_USER: "dev"
-      POSTGRES_PASSWORD: "localpass"
+      POSTGRES_DB: ${PROJECT_NAME}_local
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: localpass
     volumes:
-      - template-postgres:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     ports:
       - "5400:5432"
 
   redis:
-    image: redis:7.4.0-alpine
-    container_name: "template-redis"
+    image: redis:8.4.0-alpine
+    container_name: ${PROJECT_NAME}_redis
     command: >
       --requirepass localpass
     ports:
@@ -23,13 +23,7 @@ services:
     tmpfs:
       - /data
 
-  adminer:
-    image: adminer
-    container_name: "template-adminer"
-    ports:
-      - 8080:8080
-
 volumes:
-  template-postgres:
+  postgres-data:
     driver: local
-    name: template-postgres
+    name: ${PROJECT_NAME}_postgres
