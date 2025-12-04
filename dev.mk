@@ -4,7 +4,7 @@ update-npm-packages:
 	sh ./scripts/update-npm-packages.sh
 
 psql:
-	docker exec -it ${PROJECT_NAME}-postgres psql -U dev ${PROJECT_NAME}-local
+	docker exec -it ${PROJECT_NAME}_postgres psql -U dev ${PROJECT_NAME}_local
 
 compose-up:
 	docker compose -f ./docker-compose.dev.yml -p ${PROJECT_NAME} up -d

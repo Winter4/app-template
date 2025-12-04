@@ -7,8 +7,8 @@ export const logger = pino({});
 
 export const db = knex({
 	client: 'pg',
-	connection: config.deploy.dbUrl,
-	debug: config.deploy.dbLogs
+	connection: config.db.url,
+	debug: config.db.logs
 });
 
-export const redis = new Redis(config.deploy.redisUrl);
+export const redis = new Redis(config.redis.url);

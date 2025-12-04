@@ -21,7 +21,7 @@ declare module 'express-session' {
 }
 
 async function main() {
-	const {nodeEnv, deploy: {apiPort, frontendUrl}, sessionSecret} = config;
+	const {nodeEnv, http: {apiPort, frontendUrl}, sessionSecret} = config;
 
 	const app = express();
 

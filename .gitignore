@@ -1,8 +1,7 @@
 /node_modules
 /compiled
-docker-compose.deploy.yml
-.env
+docker-compose.prod.yml
 
 .husky/_
 
-config/local.ts
+config/local.json
