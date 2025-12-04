@@ -1,7 +1,7 @@
 import {Request, Response, NextFunction} from 'express';
 import {pinoHttp} from 'pino-http';
 
-import AppError from './errors';
+import AppError from '../errors';
 import {logger} from '@ctx';
 
 function logHTTP(req: Request, res: Response, next: NextFunction) {

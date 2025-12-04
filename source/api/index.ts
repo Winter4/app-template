@@ -9,7 +9,7 @@ import config from '@config';
 import {logger, redis} from '@ctx';
 
 import {errorHandler, preMiddlewares} from './middlewares';
-import api from './api/api.router';
+import api from './endpoints/api.router';
 
 declare module 'express-session' {
   export interface SessionData {
@@ -50,7 +50,7 @@ async function main() {
 
 	// api and stuff
 	app.use(preMiddlewares());
-	app.use('/api', api);
+	app.use(api);
 	app.use(errorHandler);
 
 	// run

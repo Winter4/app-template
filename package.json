@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "prepare": "husky",
-    "api:dev": "NODE_ENV=development npx nodemon source/api.ts | pino-pretty --translateTime",
+    "api:dev": "NODE_ENV=development npx nodemon source/api/index.ts | pino-pretty --translateTime",
     "migrate:make": "npx knex migrate:make --knexfile ./database/knexfile.ts --migrations-directory ../migrations",
     "migrate": "npx knex migrate:latest --knexfile ./database/knexfile.ts --migrations-directory ../migrations"
   },
